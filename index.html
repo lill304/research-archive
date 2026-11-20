@@ -31,7 +31,7 @@ body.alert-sequence::before{content:"";position:fixed;inset:0;z-index:9998;point
 </main><footer>INTERNAL ARCHIVE SYSTEM — AUTHORIZED ACCESS ONLY</footer>
 <script>
 (()=>{
-const PASSWORD='0820',MAX=3,KEY='research_archive_failed_attempts';
+const PASSWORD='0914',MAX=3,KEY='research_archive_failed_attempts';
 let attempts=Number(sessionStorage.getItem(KEY)||0),timer;
 const $=id=>document.getElementById(id);
 function show(id){document.body.classList.toggle('archive-open',id==='archive');document.body.classList.toggle('alert-sequence',id==='blocked'&&!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches));for(const x of ['login','blocked','welcome','archive'])$(x).classList.toggle('hidden',x!==id);$('status').textContent={login:'ACCESS CONTROL / 001',blocked:'ACCESS TERMINATED',welcome:'IDENTITY VERIFIED',archive:'AUTHORIZED / DR.'}[id];document.body.style.background=id==='blocked'?'#181215':'#f7f8f9'}
